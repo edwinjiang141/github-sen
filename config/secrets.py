@@ -4,4 +4,4 @@
 
 # config/secrets.py
 
-GITHUB_TOKEN = " "
+GITHUB_TOKEN = ""
