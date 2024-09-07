@@ -1,6 +1,6 @@
 # config/secrets.py
 
-# 在这里存储 API 密钥等敏感信息
+# 在这里存储API密钥等敏感信息
 
 # config/secrets.py
 
