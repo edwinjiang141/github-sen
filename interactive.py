@@ -6,6 +6,7 @@ from core.github_client import GitHubClient
 from reports.report_generator import ReportGenerator
 from core.llm import LLM
 from models.subscription import add_subscription, remove_subscription, list_subscriptions
+from datetime import date
 
 class GitHubSentinel(cmd.Cmd):
     intro = 'Welcome to GitHub Sentinel! Type help or ? to list commands.\n'
@@ -45,6 +46,24 @@ class GitHubSentinel(cmd.Cmd):
         print("Fetching updates and generating daily reports...")
         self.github_client.generate_daily_report()
         print("Daily reports generated successfully.")
+
+    # 手动获取时间范围内的更新
+    def do_fetch_range(self, args):
+        "Fetch updates from all subscribed repositories based on time range: fetch_range <since> <until>"
+        try:
+            params = args.split()
+            since = params[0]
+            until = params[1] if len(params) > 1 else None
+
+            since_date = date.fromisoformat(since).isoformat()
+            until_date = date.fromisoformat(until).isoformat() if until else None
+
+            print(f"Fetching updates from {since} to {until or 'now'}...")
+            self.github_client.generate_report(since=since_date, until=until_date)
+            print(f"Reports for the period {since} to {until or 'now'} generated successfully.")
+        except (IndexError, ValueError):
+            print("Please provide a valid 'since' date and optionally an 'until' date (in ISO format: YYYY-MM-DD).")
+
 
     # 生成最终报告
     def do_report(self, arg):
