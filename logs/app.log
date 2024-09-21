@@ -485,3 +485,55 @@
 2024-09-21 16:39:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
 2024-09-21 16:40:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
 2024-09-21 16:41:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:42:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:43:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:44:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:45:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:46:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:47:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:48:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:49:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:50:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:51:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:52:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:53:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:54:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:55:53 | INFO | scheduler:start_daemon:109 - Heartbeat at %s
+2024-09-21 16:56:48 | INFO | scheduler:stop_daemon:126 - Daemon was manually stopped.
+2024-09-21 17:10:07 | INFO | github_client:export_progress_by_date_range:112 - [langchain-ai/langchain]项目最新进展文件生成： daily_progress/langchain-ai_langchain/2024-09-14_to_2024-09-21.md
+2024-09-21 17:10:07 | INFO | llm:_generate_report_openai:65 - Starting report generation using GPT model.
+2024-09-21 17:10:10 | DEBUG | llm:_generate_report_openai:73 - GPT response: ChatCompletion(id='chatcmpl-A9qPwvs55mySxRXXLXxFF6YQuenjX', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='# LangChain 项目进展\n\n## 时间周期：2024-09-14至2024-09-21\n\n## 新增功能\n- 添加Azure OpenAI入门烹饪书，帮助用户快速上手。\n- 集成`langchain-snowflake`包，并添加`CortexSearchRetriever`，增强数据处理能力。\n- 集成Github embeddings模型，以扩展模型选项。\n\n## 主要改进\n- 更新文档侧边栏，添加内存迁移指南，方便用户进行迁移。\n- 修复MHTMLLoader对Word保存的MHT文件的处理，确保文件编码兼容性。\n- 优化Azure ML serverless API请求和响应格式，解决HTTP 400错误。\n\n## 修复问题\n- 关闭多个问题，包括关于`ChatPromptTemplate`的Anthropic提示缓存不工作的问题。\n- 修复造成pip安装LangChain仅失败的哈希不匹配问题。\n- 处理JSONDecodeError以及修正JsonOutputParser中的无效转义字符问题。\n- 修复多个与ChatBedrock模型相关的行为差异问题。\n- 解决与新版本langchain==0.3.0相关的检索链导入问题。', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1726909808, model='gpt-4o-mini-2024-07-18', object='chat.completion', service_tier=None, system_fingerprint='fp_1bb46167f9', usage=CompletionUsage(completion_tokens=260, prompt_tokens=751, total_tokens=1011, completion_tokens_details={'reasoning_tokens': 0}))
+2024-09-21 17:10:10 | INFO | report_generator:generate_github_report:44 - GitHub 项目报告已保存到 daily_progress/langchain-ai_langchain/2024-09-14_to_2024-09-21_report.md
+2024-09-21 17:11:12 | INFO | github_client:export_progress_by_date_range:112 - [langchain-ai/langchain]项目最新进展文件生成： daily_progress/langchain-ai_langchain/2024-09-14_to_2024-09-21.md
+2024-09-21 17:11:12 | INFO | llm:_generate_report_ollama:91 - 使用 Ollama qwen2:7b 模型生成报告。
+2024-09-21 17:11:12 | DEBUG | llm:_generate_report_ollama:105 - Ollama 响应: {'error': 'json: cannot unmarshal string into Go struct field ChatRequest.messages of type []api.Message'}
+2024-09-21 17:11:12 | ERROR | llm:_generate_report_ollama:112 - 无法从响应中提取报告内容。
+2024-09-21 17:11:12 | ERROR | llm:_generate_report_ollama:115 - 生成报告时发生错误：Ollama API 返回的响应结构无效
+2024-09-21 17:15:08 | INFO | github_client:export_progress_by_date_range:112 - [langchain-ai/langchain]项目最新进展文件生成： daily_progress/langchain-ai_langchain/2024-09-19_to_2024-09-21.md
+2024-09-21 17:15:08 | INFO | llm:_generate_report_ollama:91 - 使用 Ollama qwen2:7b 模型生成报告。
+2024-09-21 17:15:08 | DEBUG | llm:_generate_report_ollama:105 - Ollama 响应: {'error': 'json: cannot unmarshal string into Go struct field ChatRequest.messages of type []api.Message'}
+2024-09-21 17:15:08 | ERROR | llm:_generate_report_ollama:112 - 无法从响应中提取报告内容。
+2024-09-21 17:15:08 | ERROR | llm:_generate_report_ollama:115 - 生成报告时发生错误：Ollama API 返回的响应结构无效
+2024-09-21 17:17:53 | INFO | github_client:export_progress_by_date_range:112 - [langchain-ai/langchain]项目最新进展文件生成： daily_progress/langchain-ai_langchain/2024-09-19_to_2024-09-21.md
+2024-09-21 17:17:53 | INFO | llm:_generate_report_ollama:91 - 使用 Ollama qwen2:7b 模型生成报告。
+2024-09-21 17:17:53 | DEBUG | llm:_generate_report_ollama:105 - Ollama 响应: {'error': 'json: cannot unmarshal string into Go struct field ChatRequest.messages of type []api.Message'}
+2024-09-21 17:17:53 | ERROR | llm:_generate_report_ollama:112 - 无法从响应中提取报告内容。
+2024-09-21 17:17:53 | ERROR | llm:_generate_report_ollama:115 - 生成报告时发生错误：Ollama API 返回的响应结构无效
+2024-09-21 17:18:51 | INFO | github_client:export_progress_by_date_range:112 - [langchain-ai/langchain]项目最新进展文件生成： daily_progress/langchain-ai_langchain/2024-09-19_to_2024-09-21.md
+2024-09-21 17:18:51 | INFO | llm:_generate_report_ollama:91 - 使用 Ollama qwen2:7b 模型生成报告。
+2024-09-21 17:18:51 | DEBUG | llm:_generate_report_ollama:104 - Ollama 响应: {'error': 'json: cannot unmarshal string into Go struct field ChatRequest.messages of type []api.Message'}
+2024-09-21 17:18:51 | ERROR | llm:_generate_report_ollama:111 - 无法从响应中提取报告内容。
+2024-09-21 17:18:51 | ERROR | llm:_generate_report_ollama:114 - 生成报告时发生错误：Ollama API 返回的响应结构无效
+2024-09-21 17:25:05 | INFO | github_client:export_progress_by_date_range:112 - [langchain-ai/langchain]项目最新进展文件生成： daily_progress/langchain-ai_langchain/2024-09-18_to_2024-09-21.md
+2024-09-21 17:25:05 | INFO | llm:_generate_report_ollama:96 - 使用 Ollama qwen2:7b 模型生成报告。
+2024-09-21 17:25:05 | ERROR | llm:_generate_report_ollama:119 - 生成报告时发生错误：Extra data: line 1 column 5 (char 4)
+2024-09-21 17:28:06 | INFO | github_client:export_progress_by_date_range:112 - [langchain-ai/langchain]项目最新进展文件生成： daily_progress/langchain-ai_langchain/2024-09-14_to_2024-09-21.md
+2024-09-21 17:28:06 | INFO | llm:_generate_report_ollama:96 - 使用 Ollama qwen2:7b 模型生成报告。
+2024-09-21 17:28:06 | ERROR | llm:_generate_report_ollama:119 - 生成报告时发生错误：Extra data: line 1 column 5 (char 4)
+2024-09-21 17:30:01 | INFO | github_client:export_progress_by_date_range:112 - [langchain-ai/langchain]项目最新进展文件生成： daily_progress/langchain-ai_langchain/2024-09-19_to_2024-09-21.md
+2024-09-21 17:30:01 | INFO | llm:_generate_report_ollama:96 - 使用 Ollama qwen2:7b 模型生成报告。
+2024-09-21 17:30:01 | ERROR | llm:_generate_report_ollama:120 - 生成报告时发生错误：Extra data: line 1 column 5 (char 4)
+2024-09-21 17:31:22 | INFO | github_client:export_progress_by_date_range:112 - [langchain-ai/langchain]项目最新进展文件生成： daily_progress/langchain-ai_langchain/2024-09-19_to_2024-09-21.md
+2024-09-21 17:31:22 | INFO | llm:_generate_report_ollama:96 - 使用 Ollama qwen2:7b 模型生成报告。
+2024-09-21 17:31:34 | DEBUG | llm:_generate_report_ollama:110 - Ollama 响应: {'model': 'qwen2:7b', 'created_at': '2024-09-21T09:31:34.261401142Z', 'message': {'role': 'assistant', 'content': '# langchain-ai/langchain 进展报告（2024年9月19日至2024年9月21日）\n\n## 解决的问题\n\n### Issues 关闭情况概览\n\n1. **模板问题**：在templates.langchain.com 上，模板无法按照提供的说明正常工作。\n\n2. **社区整合**：废弃社区中的ollama 集成。\n\n3. **烹饪指南更新**：新增 Azure OpenAI 的入门指南至烹饪食谱。\n\n4. **集成与补丁**：移除不必要的聊天参数默认值。\n\n5. **代码审查与格式化**：改进 CI 流程，使用 ruff 的输出格式。\n\n6. **多线程响应不兼容问题**：修复当 `n>1` 时无法处理多个选择的情况。\n\n7. **合作伙伴项目**：加入与 Snowflake 集成的 `langchain-snowflake` 包，并附带 `CortexSearchRetriever` 功能。\n\n8. **文档更新**：\n   - 移除已弃用的加载器。\n   - 添加从 web 页面加载资料的指南。\n   - 优化 GremlinGraph 的文档 URL 使用方式。\n   - 处理文档中的依赖项时的错误提示。\n\n9. **文件处理改进**：修正 MHTMLLoader 假定 UTF-8 编码而实际 Microsoft Word 文件中使用的是 UTF-16 的问题。\n\n10. **功能与体验优化**：\n    - 修复在 Azure Cosmos 集成测试中连接字符串的问题。\n    - 确保不同类型的模型在 Anthropic 的缓存策略上一致。\n\n### 具体修复内容\n\n#### 文件与加载器相关\n- 解决了 MHT 文件部分编码为 UTF-16 而 Loader 假设为 UTF-8 的问题，以优化文件处理流程。\n\n#### 文档改进\n- 从特性表中移除已弃用的加载器，并添加了有关加载网页的指南。\n\n#### 兼容性与功能修复\n- 更新社区集成中的 Github 集成。\n- 添加对更多 Clova Embedding 模型的支持。\n- 解决导入 `create_retrieval_chain` 函数时遇到的问题，以及 `langchain==0.3.0` 版本中可能引发的错误。\n\n#### 代码与 API 相关\n- 确保 kwargs 不被意外包含在 `Runnable.invoke` 的签名中。\n- 修复并改善了 Azure ML Serverless API 请求和响应格式化，在 CI 流程中实现了 HTTP 400 错误的解决方法。\n\n### 技术改进与优化\n\n#### 安装问题\n- 解决因哈希不匹配导致 pip 安装 `LangChain` 的错误。\n\n#### 功能增强\n- 对 VectorStore 支持 id 提供了更全面的支持。\n- 为 `ChatBedrock` 不同模型的使用提供一致的行为表现。\n\n#### 实施与测试新功能\n- 添加 FalkorDB 在聊天历史中的支持，包括实现、测试和示例笔记本。\n  \n#### 用户体验优化\n- 更新教程以解决在使用本地模型（如 Llama3）时遇到的问题。\n\n### 其他改进与提升\n\n#### 网络请求与处理\n- 处理 `JSONDecodeError`：修复了解析 JSON 输出时出现的错误。\n\n通过这些工作和改进，langchain-ai/langchain 项目在稳定性、兼容性、用户体验、文档清晰度以及功能扩展方面取得了显著进展。'}, 'done_reason': 'stop', 'done': True, 'total_duration': 11387625260, 'load_duration': 5496682737, 'prompt_eval_count': 854, 'prompt_eval_duration': 114527000, 'eval_count': 757, 'eval_duration': 5629500000}
+2024-09-21 17:31:34 | INFO | report_generator:generate_github_report:44 - GitHub 项目报告已保存到 daily_progress/langchain-ai_langchain/2024-09-19_to_2024-09-21_report.md

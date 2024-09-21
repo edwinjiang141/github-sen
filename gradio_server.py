@@ -21,7 +21,7 @@ def generate_github_report(model_type, model_name, repo, days):
     else:
         config.ollama_model_name = model_name
 
-    llm = LLM()  # 创建语言模型实例
+    llm = LLM(config)  # 创建语言模型实例
     report_generator = ReportGenerator(llm)  # 创建报告生成器实例
 
     # 定义一个函数，用于导出和生成指定时间范围内项目的进展报告
