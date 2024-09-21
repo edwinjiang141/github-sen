@@ -6,7 +6,7 @@
 
 # LangChain 项目进展
 
-## 时间周期：2024-08-13至2024-08-18
+## 时间周期：2024-08-01至2024-08-18
 
 ## 新增功能
 - langchain-box: 添加langchain box包和DocumentLoader

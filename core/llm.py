@@ -3,6 +3,7 @@ from openai import OpenAI  # 导入OpenAI库用于访问GPT模型
 from core.logger import LOG  # 导入日志模块
 from config.secrets import OPENAI_API_KEY
 import json
+from core.logger import LOG
 
 class LLM:
     def __init__(self):

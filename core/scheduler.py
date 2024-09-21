@@ -5,11 +5,11 @@ import time
 import threading
 from core.updater import fetch_updates
 from core.notifier import notify
-from reports.report_generator import ReportGenerator
+from reports.report_generator import generate_report
 
 def job():
     updates = fetch_updates()
-    report = ReportGenerator.generate_final_report(updates)
+    report = generate_report(updates)
     # notify(report)
 
 def start_scheduler():

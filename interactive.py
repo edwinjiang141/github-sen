@@ -1,7 +1,6 @@
 # interactive.py
 
 import cmd
-from core.scheduler import start_scheduler_in_background
 from core.github_client import GitHubClient
 from reports.report_generator import ReportGenerator
 from core.llm import LLM
@@ -44,7 +43,7 @@ class GitHubSentinel(cmd.Cmd):
     def do_fetch(self, arg):
         "Fetch updates (issues and pull requests) from all subscribed repositories and generate daily Markdown reports"
         print("Fetching updates and generating daily reports...")
-        self.github_client.generate_daily_report()
+        self.github_client.generate_report()
         print("Daily reports generated successfully.")
 
     # 手动获取时间范围内的更新
@@ -82,6 +81,6 @@ class GitHubSentinel(cmd.Cmd):
 
 if __name__ == '__main__':
     # Start scheduler in the background
-    start_scheduler_in_background()
+    # start_scheduler_in_background()
     # Start the interactive command line interface
     GitHubSentinel().cmdloop()
