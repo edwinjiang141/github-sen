@@ -6,7 +6,8 @@ from reports.report_generator import ReportGenerator
 from core.llm import LLM
 from models.subscription import add_subscription, remove_subscription, list_subscriptions
 from datetime import date
-
+from config.configs import Config  # 导入配置管理模块
+config = Config()
 class GitHubSentinel(cmd.Cmd):
     intro = 'Welcome to GitHub Sentinel! Type help or ? to list commands.\n'
     prompt = '(GitHub Sentinel) '
@@ -68,7 +69,7 @@ class GitHubSentinel(cmd.Cmd):
     def do_report(self, arg):
         "Generate a summarized report for the day by reading all daily reports"
         print("Generating final summarized report...")
-        llm = LLM()
+        llm = LLM(config)
         report = ReportGenerator(llm)
         report.generate_final_report()
         print("Final report generated successfully.")

@@ -8,6 +8,7 @@ from core.logger import LOG  # 导入日志模块
 from core.github_client import GitHubClient
 from reports.report_generator import ReportGenerator
 from core.llm import LLM
+from config.configs import Config  # 导入配置管理模块
 
 # 守护进程相关配置
 PID_FILE = "github_sentinel_demon.pid"
@@ -20,7 +21,7 @@ LOG.add(LOG_FILE, rotation="1 MB", level="DEBUG", format=LOG_FORMAT)
 
 # 初始化 GitHubClient 实例
 github_client = GitHubClient()
-
+config = Config()
 # 定时任务
 def job():
     try:
@@ -31,7 +32,7 @@ def job():
 
         # 生成最终总结报告
         LOG.info("Starting to generate final summarized report.")
-        llm = LLM()
+        llm = LLM(config)
         report = ReportGenerator(llm)
         report.generate_final_report()
         LOG.info("Final summarized report generated successfully.")
